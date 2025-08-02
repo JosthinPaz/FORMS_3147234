@@ -6,15 +6,14 @@
     <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
-    <form class="formulario">
+    <form id="survey-form" class="formulario">
       <label for="nombre">Name</label>
       <input type="text" id="nombre" placeholder="Please enter your name" />
 
       <label for="email">Email</label>
       <input type="email" id="email" placeholder="Please enter your email" />
 
-      <label for="edad">Age</label
-      ><!--  -->
+      <label for="edad">Age</label>
       <input type="number" id="edad" placeholder="Please enter your age" />
 
       <label for="opcion">Choose an option</label>
@@ -25,12 +24,12 @@
         <option>Option 3</option>
       </select>
 
-      <div class="pregunta">
+      <div class="pregunta" id="pregunta-nuevo-auto">
         <span>Do you plan to buy a new car in the next 5 years?</span>
-        <div class="opciones-radio">
-          <label><input type="radio" name="nuevo_auto" /> Yes</label>
-          <label><input type="radio" name="nuevo_auto" /> No</label>
-          <label><input type="radio" name="nuevo_auto" /> Maybe</label>
+        <div class="opciones-radio" id="opciones-nuevo-auto">
+          <label><input type="radio" name="nuevo_auto" id="nuevo_auto_yes" /> Yes</label>
+          <label><input type="radio" name="nuevo_auto" id="nuevo_auto_no" /> No</label>
+          <label><input type="radio" name="nuevo_auto" id="nuevo_auto_maybe" /> Maybe</label>
         </div>
       </div>
 
@@ -43,15 +42,15 @@
         <option>Other</option>
       </select>
 
-      <div class="pregunta">
+      <div class="pregunta" id="pregunta-transporte">
         <span>What type of means of transportation do you own?</span>
-        <div class="opciones-checkbox">
-          <label><input type="checkbox" /> Car</label>
-          <label><input type="checkbox" /> Boat</label>
-          <label><input type="checkbox" /> Bicycle</label>
-          <label><input type="checkbox" /> Motorcycle</label>
-          <label><input type="checkbox" /> Plane</label>
-          <label><input type="checkbox" /> Bike</label>
+        <div class="opciones-checkbox" id="opciones-transporte">
+          <label><input type="checkbox" id="transporte_car" /> Car</label>
+          <label><input type="checkbox" id="transporte_boat" /> Boat</label>
+          <label><input type="checkbox" id="transporte_bicycle" /> Bicycle</label>
+          <label><input type="checkbox" id="transporte_motorcycle" /> Motorcycle</label>
+          <label><input type="checkbox" id="transporte_plane" /> Plane</label>
+          <label><input type="checkbox" id="transporte_bike" /> Bike</label>
         </div>
       </div>
 
@@ -60,7 +59,14 @@
         id="comentarios"
         placeholder="Please enter your comments"
       ></textarea>
-      <button type="submit">Submit</button>
-    </form>
+      <button type="submit" id="submit" value="submit">Submit</button>
+    </form> 
+      <div id="modal-success" class="modal hidden">
+        <div class="modal-content">
+          <h2>¡Datos enviados con éxito!</h2>
+          <button id="close-modal">Cerrar</button>
+        </div>
+      </div>
   </body>
+  <script type="module" src="main.js"></script>
 </html>
