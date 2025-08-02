@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Formulario</title>
     <link rel="stylesheet" href="estilos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <form id="survey-form" class="formulario">
@@ -27,9 +28,18 @@
       <div class="pregunta" id="pregunta-nuevo-auto">
         <span>Do you plan to buy a new car in the next 5 years?</span>
         <div class="opciones-radio" id="opciones-nuevo-auto">
-          <label><input type="radio" name="nuevo_auto" id="nuevo_auto_yes" /> Yes</label>
-          <label><input type="radio" name="nuevo_auto" id="nuevo_auto_no" /> No</label>
-          <label><input type="radio" name="nuevo_auto" id="nuevo_auto_maybe" /> Maybe</label>
+          <label
+            ><input type="radio" name="nuevo_auto" id="nuevo_auto_yes" />
+            Yes</label
+          >
+          <label
+            ><input type="radio" name="nuevo_auto" id="nuevo_auto_no" />
+            No</label
+          >
+          <label
+            ><input type="radio" name="nuevo_auto" id="nuevo_auto_maybe" />
+            Maybe</label
+          >
         </div>
       </div>
 
@@ -47,8 +57,13 @@
         <div class="opciones-checkbox" id="opciones-transporte">
           <label><input type="checkbox" id="transporte_car" /> Car</label>
           <label><input type="checkbox" id="transporte_boat" /> Boat</label>
-          <label><input type="checkbox" id="transporte_bicycle" /> Bicycle</label>
-          <label><input type="checkbox" id="transporte_motorcycle" /> Motorcycle</label>
+          <label
+            ><input type="checkbox" id="transporte_bicycle" /> Bicycle</label
+          >
+          <label
+            ><input type="checkbox" id="transporte_motorcycle" />
+            Motorcycle</label
+          >
           <label><input type="checkbox" id="transporte_plane" /> Plane</label>
           <label><input type="checkbox" id="transporte_bike" /> Bike</label>
         </div>
@@ -60,13 +75,13 @@
         placeholder="Please enter your comments"
       ></textarea>
       <button type="submit" id="submit" value="submit">Submit</button>
-    </form> 
-      <div id="modal-success" class="modal hidden">
-        <div class="modal-content">
-          <h2>¡Datos enviados con éxito!</h2>
-          <button id="close-modal">Cerrar</button>
-        </div>
+    </form>
+    <div id="modal-success" class="modal hidden">
+      <div class="modal-content">
+        <h2>¡Datos enviados con éxito!</h2>
+        <button type="button" id="close-modal">Cerrar</button>
       </div>
+    </div>
   </body>
   <script type="module" src="main.js"></script>
 </html>
